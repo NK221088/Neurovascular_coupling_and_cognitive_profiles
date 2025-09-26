@@ -15,8 +15,7 @@ for condition in different_conditions:
         ch_stats["participant"].append("participant_1")
         ch_stats["channel"].append(channel)
         ch_stats["condition"].append(condition)
-        for metric, value in stats.items():
-            ch_stats[metric].append(value)
+        ch_stats["mean"].append(stats["mean"])
 channel_df = pd.DataFrame(ch_stats)
 
 import rpy2.robjects as robjects
